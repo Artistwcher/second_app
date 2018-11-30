@@ -6,9 +6,16 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    
+    <%= render 'layouts/shim' %>
+    
   </head>
-
   <body>
-    <%= yield %>#这里通过Ruby语言将各个页面代码插到这里
+    <%= render 'layouts/header' %>
+    <div class="container">
+      <% #下面这句话是将各视图代码嵌入到yield这里 %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
   </body>
 </html>

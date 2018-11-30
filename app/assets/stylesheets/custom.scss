@@ -1,0 +1,98 @@
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+/*上面是引入bootstrap框架的样式*/
+/*下面是全局样式*/
+
+body{
+    padding-top: 60px;
+}
+
+section{
+    overflow: auto;
+}
+
+textarea{
+    resize: vertical;
+}
+
+.center{
+    text-align: center;
+}
+
+.center h1{
+    margin-bottom: 10px;
+}
+
+h1,h2,h3,h4,h5,h6{
+    line-height: 1;
+}
+
+h1{
+    font-size: 3em;
+    letter-spacing: -2px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+h2{
+    font-size: 1.2em;
+    letter-spacing: -1px;
+    margin-bottom: 30px;
+    text-align: center;
+    font-weight: normal;
+    color: #777;
+}
+
+p{
+    font-size: 1.1em;
+    line-height: 1.7em;
+}
+
+/*下面是header部分*/
+
+#logo{
+    float: left;
+    margin-right: 10px;
+    font-size: 1.7em;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: -1px;
+    padding-top: 9px;
+    font-weight: bold;
+}
+
+#logo:hover{
+    color: #fff;
+    text-decoration: none;
+}
+/*下面是把图片隐藏起来
+img{
+    display: none;
+}
+*/
+
+/* footer */
+footer{
+    margin-top: 45px;
+    padding-top: 5px;
+    border: 1px solid #eaeaea;
+    color: #777;
+}
+footer a{
+    color: #555;
+}
+footer a:hover{
+    color: #222;
+}
+footer small{
+    float: left;
+}
+footer ul{
+    float: right;
+    list-style: none;
+}
+footer ul li{
+    float: left;
+    margin-left: 15px;
+}

@@ -1,13 +1,16 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'#脚手架新生成的，get表明，这个路由响应的是GET请求
-  #GET表示读取一个网页
-  get 'static_pages/help'
-  get 'static_pages/about'
+  get 'users/new'
+
+  root 'static_pages#home'
+  #get 'static_pages/home' #GET表示读取一个网页
+  get '/help', to: 'static_pages#help'
+  get '/about', to: 'static_pages#about'
+  get '/contact', to: 'static_pages#contact'
+  get '/signup', to: 'users#new' #给其指定路由名
+  #get 'static_pages/help'
+  #get 'static_pages/about'
+  #get 'static_pages/contact'
   
   resources :microposts
   resources :users #加入这个控制器里所有URL？
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
-  #root 'application#hello'
-  #root 'users#index'
-  root 'static_pages#home'
 end
