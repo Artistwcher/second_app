@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
-  get 'static_pages/home'
+  get 'static_pages/home'#脚手架新生成的，get表明，这个路由响应的是GET请求
+  #GET表示读取一个网页
 
   get 'static_pages/help'
 
