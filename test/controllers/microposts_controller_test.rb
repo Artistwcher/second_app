@@ -1,3 +1,5 @@
+=begin
+#这是Ruby的多行注释
 require 'test_helper'
 
 class MicropostsControllerTest < ActionDispatch::IntegrationTest
@@ -14,7 +16,7 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     get new_micropost_url
     assert_response :success
   end
-
+  
   test "should create micropost" do
     assert_difference('Micropost.count') do
       post microposts_url, params: { micropost: { content: @micropost.content, user_id: @micropost.user_id } }
@@ -46,3 +48,4 @@ class MicropostsControllerTest < ActionDispatch::IntegrationTest
     assert_redirected_to microposts_url
   end
 end
+=end

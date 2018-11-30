@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SecondApp</title>
+    <title><%= yield(:title) %></title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -9,6 +9,6 @@
   </head>
 
   <body>
-    <%= yield %>
+    <%= yield %>#这里通过Ruby语言将各个页面代码插到这里
   </body>
 </html>
