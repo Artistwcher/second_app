@@ -12,5 +12,5 @@ Rails.application.routes.draw do
   #get 'static_pages/contact'
   
   resources :microposts
-  resources :users #加入这个控制器里所有URL？
+  resources :users #加入这个控制器里所有URL？把数据视为资源
 end
