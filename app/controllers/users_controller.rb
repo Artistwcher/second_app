@@ -9,11 +9,13 @@ class UsersController < ApplicationController
     #debugger
   end
   
+  #create是存储用户注册的
   def create
     #@user=User.new(params[:user])
     #下面是健壮参数技术
     @user=User.new(user_params)
     if @user.save
+      log_in @user #用户注册后立马存入id
       flash[:success]="Welcome to the Sample App" #赋值给变量
       redirect_to @user #重定向回user_url(@user)？,重定向到用户主页
     else
