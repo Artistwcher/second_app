@@ -8,7 +8,8 @@ class SessionsController < ApplicationController
       log_in user #存session
       #remember user #存DB与浏览器都存cookie
       params[:session][:remember_me]=='1' ? remember(user) : forget(user) #三元运算符
-      redirect_to user #重定向到users视图下的show视图
+      #redirect_to user #重定向到users视图下的show视图
+      redirect_back_or user #重写了上面的重定向
     else
       #flash[:danger]='Invalid email/password combination'
       flash.now[:danger]='Invalid email/password combination' #提示会在下次请求时消失

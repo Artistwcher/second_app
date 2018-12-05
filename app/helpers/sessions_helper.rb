@@ -42,4 +42,18 @@ module SessionsHelper
         session.delete(:user_id)
         @current_user=nil
     end
+    
+    def current_user?(user)
+        user==current_user
+    end
+    
+    #重定向到用户之前想访问的界面
+    def redirect_back_or(default)
+        redirect_to(session[:forwarding_url] || default )
+        session.delete(:forwarding_url)
+    end
+    #要想完成上面功能，要先存储后面需要的地址
+    def store_location
+        session[:forwarding_url]=request.original_url if request.get?
+    end
 end
